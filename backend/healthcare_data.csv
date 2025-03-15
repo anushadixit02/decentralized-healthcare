@@ -1,0 +1,350 @@
+Disease,Fever,Cough,Fatigue,Difficulty Breathing,Age,Gender,Blood Pressure,Cholesterol Level,Outcome Variable,Patient Name
+Influenza,Yes,No,Yes,Yes,19,Female,Low,Normal,Positive,Aki Wang
+Common Cold,No,Yes,Yes,No,25,Female,Normal,Normal,Negative,Hyun Nguyen
+Eczema,No,Yes,Yes,No,25,Female,Normal,Normal,Negative,Ravi Patel
+Asthma,Yes,Yes,No,Yes,25,Male,Normal,Normal,Positive,Aki Cheng
+Asthma,Yes,Yes,No,Yes,25,Male,Normal,Normal,Positive,Hiroshi Lee
+Eczema,Yes,No,No,No,25,Female,Normal,Normal,Positive,Sakura Wang
+Influenza,Yes,Yes,Yes,Yes,25,Female,Normal,Normal,Positive,Wei Kim
+Influenza,Yes,Yes,Yes,Yes,25,Female,Normal,Normal,Positive,Minh Nguyen
+Hyperthyroidism,No,Yes,No,No,28,Female,Normal,Normal,Negative,Hana Lee
+Hyperthyroidism,No,Yes,No,No,28,Female,Normal,Normal,Negative,Wei Cheng
+Asthma,Yes,No,No,Yes,28,Male,High,Normal,Positive,Minh Cheng
+Allergic Rhinitis,No,Yes,Yes,No,29,Female,Normal,Low,Negative,Sakura Nguyen
+Anxiety Disorders,No,Yes,No,No,29,Female,Normal,High,Negative,Jia Lee
+Common Cold,No,No,No,No,29,Female,Low,Normal,Negative,Hyun Wang
+Diabetes,No,No,No,No,29,Male,Low,Normal,Negative,Kaito Yamamoto
+Gastroenteritis,No,Yes,No,No,29,Female,Normal,Normal,Negative,Mei Kumar
+Pancreatitis,Yes,No,No,No,29,Female,High,Normal,Negative,Sanjay Nguyen
+Rheumatoid Arthritis,No,Yes,Yes,Yes,29,Female,High,High,Negative,Mei Kim
+Depression,Yes,Yes,Yes,Yes,29,Male,High,Normal,Positive,Hiroshi Yamamoto
+Liver Cancer,Yes,Yes,Yes,Yes,29,Female,Normal,Normal,Positive,Aki Tanaka
+Stroke,Yes,Yes,Yes,Yes,29,Female,Normal,Normal,Positive,Aiko Lee
+Urinary Tract Infection,Yes,Yes,Yes,No,29,Male,High,High,Positive,Hyun Wang
+Dengue Fever,Yes,No,Yes,No,30,Female,Normal,Normal,Negative,Jia Cheng
+Dengue Fever,Yes,No,Yes,No,30,Female,Normal,Normal,Negative,Aki Yamamoto
+Eczema,No,Yes,Yes,No,30,Male,High,High,Negative,Hiroshi Cheng
+Gastroenteritis,Yes,Yes,Yes,No,30,Male,High,High,Negative,Chen Lee
+Hepatitis,Yes,Yes,Yes,Yes,30,Male,High,Normal,Negative,Aiko Lee
+Kidney Cancer,No,No,Yes,No,30,Male,Normal,Normal,Negative,Minh Kim
+Migraine,Yes,No,No,No,30,Female,Normal,Normal,Negative,Jun Nguyen
+Migraine,No,Yes,Yes,No,30,Female,Normal,Normal,Negative,Chen Kim
+Muscular Dystrophy,No,No,Yes,No,30,Male,High,High,Negative,Ravi Kim
+Sinusitis,No,Yes,Yes,No,30,Male,Normal,Normal,Negative,Priya Kumar
+Ulcerative Colitis,Yes,Yes,No,No,30,Female,Normal,Normal,Negative,Jia Tanaka
+Ulcerative Colitis,No,Yes,Yes,No,30,Female,Normal,Normal,Negative,Kaito Tanaka
+Asthma,Yes,Yes,No,Yes,30,Female,Normal,Normal,Positive,Aiko Nguyen
+Asthma,Yes,Yes,No,Yes,30,Female,Normal,Normal,Positive,Hyun Kim
+Asthma,Yes,Yes,Yes,Yes,30,Female,Normal,Normal,Positive,Nari Patel
+Bipolar Disorder,No,No,Yes,No,30,Female,High,High,Positive,Mai Nguyen
+Bronchitis,Yes,Yes,No,Yes,30,Female,Low,Normal,Positive,Kaito Lim
+Bronchitis,Yes,Yes,Yes,Yes,30,Male,High,High,Positive,Priya Kumar
+Bronchitis,Yes,Yes,Yes,Yes,30,Male,High,High,Positive,Mai Nguyen
+Cerebral Palsy,No,No,Yes,Yes,30,Female,Normal,Normal,Positive,Mei Wang
+Colorectal Cancer,No,No,Yes,No,30,Female,Normal,High,Positive,Ravi Wang
+Eczema,Yes,No,No,No,30,Male,High,High,Positive,Mei Yamamoto
+Hypertensive Heart Disease,No,No,Yes,No,30,Female,High,High,Positive,Hyun Kim
+Influenza,Yes,Yes,Yes,No,30,Male,High,Normal,Positive,Minh Lee
+Influenza,Yes,Yes,Yes,Yes,30,Female,Normal,Normal,Positive,Mei Nguyen
+Multiple Sclerosis,No,No,Yes,No,30,Female,High,High,Positive,Sunita Yamamoto
+Myocardial Infarction (Heart...,Yes,Yes,Yes,Yes,30,Female,High,High,Positive,Jia Patel
+Urinary Tract Infection (UTI),Yes,No,No,No,30,Female,Normal,Normal,Positive,Hyun Patel
+Asthma,No,No,No,Yes,31,Male,Normal,Low,Negative,Ravi Cheng
+Osteoporosis,No,No,No,Yes,31,Male,Low,Normal,Negative,Mai Kumar
+Common Cold,Yes,No,Yes,Yes,31,Male,High,High,Positive,Yuna Yamamoto
+Migraine,Yes,No,No,No,31,Female,Normal,Normal,Positive,Yuna Yamamoto
+Pneumonia,Yes,No,Yes,Yes,32,Female,High,Normal,Positive,Aiko Nguyen
+Allergic Rhinitis,No,No,Yes,No,35,Female,Normal,Low,Negative,Sanjay Cheng
+Asthma,No,Yes,Yes,Yes,35,Female,Normal,High,Negative,Sunita Kim
+Asthma,Yes,Yes,Yes,Yes,35,Female,Normal,Normal,Negative,Jun Kim
+Asthma,No,Yes,Yes,Yes,35,Female,High,Normal,Negative,Sanjay Patel
+Asthma,No,Yes,Yes,Yes,35,Female,High,Normal,Negative,Sakura Lee
+Atherosclerosis,No,No,Yes,No,35,Male,Normal,Normal,Negative,Hiroshi Yamamoto
+Chronic Obstructive Pulmonary...,Yes,Yes,Yes,Yes,35,Male,Normal,Normal,Negative,Priya Lee
+Common Cold,Yes,Yes,Yes,No,35,Male,High,Normal,Negative,Jia Cheng
+Eczema,No,Yes,No,No,35,Male,High,Normal,Negative,Hyun Cheng
+Epilepsy,No,No,Yes,No,35,Male,High,High,Negative,Wei Kim
+Hypertension,Yes,Yes,Yes,No,35,Female,High,Normal,Negative,Mai Kumar
+Hyperthyroidism,Yes,Yes,Yes,No,35,Female,Normal,Normal,Negative,Mei Kim
+Obsessive-Compulsive Disorde...,No,No,Yes,No,35,Male,Normal,Normal,Negative,Chen Yamamoto
+Pneumonia,Yes,Yes,Yes,Yes,35,Female,Normal,Normal,Negative,Kaito Lim
+Pneumonia,Yes,Yes,Yes,Yes,35,Female,Normal,Normal,Negative,Wei Kumar
+Psoriasis,Yes,No,No,No,35,Female,Normal,Low,Negative,Hana Patel
+Psoriasis,No,Yes,Yes,No,35,Female,Normal,Low,Negative,Hana Kim
+Rubella,Yes,No,Yes,No,35,Female,High,Normal,Negative,Chen Cheng
+Rubella,Yes,No,Yes,No,35,Female,High,Normal,Negative,Nari Nguyen
+Urinary Tract Infection (UTI),No,Yes,Yes,No,35,Male,High,High,Negative,Sanjay Tanaka
+Asthma,Yes,Yes,No,Yes,35,Male,Normal,Normal,Positive,Kaito Cheng
+Asthma,Yes,Yes,No,Yes,35,Male,Normal,Normal,Positive,Hana Wang
+Cirrhosis,No,No,Yes,No,35,Female,Normal,High,Positive,Nari Tanaka
+Conjunctivitis (Pink Eye),No,Yes,No,No,35,Female,High,High,Positive,Sunita Wang
+Depression,No,No,Yes,No,35,Female,Normal,High,Positive,Aki Tanaka
+Gastroenteritis,Yes,No,Yes,Yes,35,Male,Low,High,Positive,Chen Nguyen
+Hyperthyroidism,Yes,Yes,Yes,No,35,Male,High,High,Positive,Jun Nguyen
+Hyperthyroidism,Yes,Yes,Yes,No,35,Male,High,High,Positive,Yuna Kim
+Kidney Cancer,No,No,Yes,No,35,Male,High,High,Positive,Hiroshi Lim
+Liver Cancer,No,No,Yes,No,35,Female,High,High,Positive,Hiroshi Cheng
+Liver Disease,No,No,Yes,No,35,Male,High,High,Positive,Sanjay Patel
+Malaria,Yes,No,No,No,35,Male,High,High,Positive,Sunita Cheng
+Malaria,Yes,No,No,No,35,Male,High,High,Positive,Kaito Kumar
+Migraine,No,Yes,Yes,No,35,Male,High,High,Positive,Hana Lee
+Migraine,Yes,No,No,No,35,Male,High,High,Positive,Sakura Nguyen
+Pancreatitis,No,No,Yes,No,35,Male,Normal,High,Positive,Mai Nguyen
+Rheumatoid Arthritis,Yes,Yes,Yes,No,35,Male,Normal,Low,Positive,Chen Yamamoto
+Rheumatoid Arthritis,No,No,Yes,No,35,Female,Normal,Low,Positive,Aiko Lim
+Spina Bifida,No,No,Yes,No,35,Female,Normal,Normal,Positive,Hana Lim
+Ulcerative Colitis,No,No,Yes,No,35,Male,High,High,Positive,Aki Nguyen
+Ulcerative Colitis,Yes,No,No,No,35,Male,High,High,Positive,Ravi Kim
+Urinary Tract Infection,Yes,No,Yes,No,35,Female,Normal,High,Positive,Mei Wang
+Allergic Rhinitis,No,Yes,No,No,38,Female,Low,Normal,Negative,Yuna Cheng
+Depression,No,No,No,No,38,Female,Normal,High,Negative,Ravi Lee
+Gastroenteritis,No,No,No,No,38,Male,Normal,Low,Negative,Ravi Wang
+Influenza,No,No,No,No,38,Male,Normal,Normal,Negative,Hiroshi Wang
+Kidney Disease,No,No,Yes,No,38,Female,Low,Normal,Negative,Ravi Kim
+Liver Cancer,Yes,Yes,No,No,38,Female,High,Normal,Negative,Jun Tanaka
+Liver Disease,No,Yes,No,Yes,38,Male,Low,Normal,Negative,Hiroshi Cheng
+Osteoporosis,No,Yes,No,No,38,Female,Normal,High,Negative,Ravi Kumar
+Stroke,Yes,Yes,No,No,38,Female,High,Normal,Negative,Sunita Nguyen
+Anxiety Disorders,Yes,No,Yes,Yes,38,Male,High,High,Positive,Mai Patel
+Diabetes,Yes,No,Yes,Yes,38,Male,High,Low,Positive,Yuna Lee
+Migraine,Yes,Yes,No,No,38,Male,High,High,Positive,Sunita Nguyen
+Osteoarthritis,Yes,Yes,Yes,No,38,Male,High,High,Positive,Sunita Yamamoto
+Pneumonia,Yes,Yes,Yes,Yes,38,Male,Normal,Normal,Positive,Minh Kim
+Klinefelter Syndrome,No,No,Yes,No,39,Female,Normal,Normal,Positive,Aki Yamamoto
+Acne,No,No,Yes,No,40,Male,Normal,Normal,Negative,Aiko Yamamoto
+Brain Tumor,No,No,Yes,No,40,Male,Normal,Normal,Negative,Sakura Lim
+Bronchitis,No,Yes,No,Yes,40,Female,Normal,Normal,Negative,Jun Kim
+Cystic Fibrosis,No,No,Yes,Yes,40,Male,High,High,Negative,Jun Yamamoto
+Diabetes,Yes,No,No,No,40,Female,High,High,Negative,Mei Kim
+Glaucoma,No,No,Yes,No,40,Male,High,Normal,Negative,Ravi Nguyen
+Osteoarthritis,No,No,Yes,No,40,Male,High,Normal,Negative,Minh Cheng
+Rabies,Yes,Yes,No,No,40,Female,High,Normal,Negative,Jia Patel
+Rabies,Yes,Yes,No,No,40,Female,High,Normal,Negative,Sakura Patel
+Asthma,Yes,No,Yes,No,40,Male,Low,Normal,Positive,Hyun Lim
+Asthma,Yes,Yes,No,Yes,40,Female,Normal,Normal,Positive,Ravi Kim
+Asthma,Yes,Yes,No,Yes,40,Female,Normal,Normal,Positive,Jia Cheng
+Asthma,No,No,Yes,Yes,40,Male,High,High,Positive,Aki Wang
+Asthma,Yes,No,Yes,Yes,40,Male,Normal,High,Positive,Mai Wang
+Asthma,Yes,No,Yes,Yes,40,Male,Normal,High,Positive,Hiroshi Nguyen
+Chickenpox,No,Yes,No,No,40,Male,Normal,High,Positive,Kaito Yamamoto
+Chickenpox,No,Yes,No,No,40,Male,Normal,High,Positive,Sunita Lim
+Coronary Artery Disease,No,No,Yes,No,40,Female,High,High,Positive,Minh Yamamoto
+"Eating Disorders (Anorexia,...",No,No,Yes,No,40,Female,High,High,Positive,Jun Patel
+Fibromyalgia,No,No,Yes,No,40,Female,High,High,Positive,Priya Wang
+Gastroenteritis,Yes,Yes,Yes,No,40,Male,High,High,Positive,Priya Kumar
+Hemophilia,No,No,Yes,No,40,Female,Normal,Normal,Positive,Jia Kumar
+Hyperthyroidism,No,No,Yes,No,40,Male,High,High,Positive,Sakura Cheng
+Hypoglycemia,No,No,Yes,No,40,Female,High,High,Positive,Sunita Patel
+Lymphoma,No,Yes,No,No,40,Female,Normal,High,Positive,Minh Kumar
+Pneumonia,Yes,Yes,Yes,Yes,40,Female,Normal,High,Positive,Minh Wang
+Psoriasis,No,Yes,Yes,No,40,Male,High,Normal,Positive,Yuna Cheng
+Psoriasis,Yes,No,No,No,40,Male,High,Normal,Positive,Jun Tanaka
+Psoriasis,No,Yes,No,No,40,Female,Normal,High,Positive,Jun Wang
+Tuberculosis,Yes,Yes,Yes,Yes,40,Male,High,High,Positive,Yuna Lim
+Tuberculosis,Yes,Yes,Yes,Yes,40,Male,High,High,Positive,Hana Cheng
+Anxiety Disorders,No,No,No,No,42,Male,Low,Normal,Negative,Kaito Wang
+Common Cold,Yes,Yes,No,No,42,Female,High,High,Negative,Hana Kim
+Depression,Yes,No,No,Yes,42,Male,High,Normal,Negative,Kaito Kim
+Influenza,No,Yes,No,No,42,Female,Normal,High,Negative,Nari Kim
+Kidney Cancer,Yes,No,No,No,42,Female,Normal,Normal,Negative,Ravi Yamamoto
+Liver Cancer,Yes,No,Yes,Yes,42,Male,Normal,Low,Negative,Aki Lee
+Liver Disease,Yes,No,No,Yes,42,Female,Normal,Normal,Negative,Ravi Lee
+Lung Cancer,Yes,No,Yes,Yes,42,Male,Normal,Low,Negative,Nari Wang
+Migraine,Yes,Yes,Yes,No,42,Male,High,High,Negative,Nari Kim
+Osteoarthritis,No,No,Yes,No,42,Male,Normal,Low,Negative,Sakura Lee
+Stroke,Yes,No,Yes,No,42,Male,Normal,Low,Negative,Yuna Cheng
+Urinary Tract Infection,No,Yes,Yes,Yes,42,Female,Normal,Low,Negative,Mei Kumar
+Diabetes,Yes,Yes,Yes,No,42,Male,High,Normal,Positive,Minh Tanaka
+Hypothyroidism,Yes,Yes,Yes,No,42,Female,High,High,Positive,Ravi Kumar
+Hypothyroidism,Yes,Yes,Yes,No,42,Female,High,High,Positive,Priya Patel
+Kidney Disease,Yes,No,Yes,No,42,Female,High,Low,Positive,Chen Lim
+Pneumonia,No,Yes,Yes,Yes,43,Female,High,Normal,Positive,Mei Kim
+Allergic Rhinitis,No,Yes,Yes,No,45,Male,High,Normal,Negative,Wei Lim
+Autism Spectrum Disorder (ASD),No,No,Yes,No,45,Male,Normal,Normal,Negative,Nari Lee
+Crohn's Disease,Yes,No,Yes,No,45,Male,High,Normal,Negative,Aki Kim
+Hepatitis,Yes,No,Yes,No,45,Female,High,High,Negative,Mai Nguyen
+Hepatitis,Yes,No,Yes,No,45,Female,High,High,Negative,Hana Kumar
+Hyperglycemia,No,No,Yes,No,45,Male,Normal,Normal,Negative,Sanjay Tanaka
+Kidney Cancer,No,Yes,Yes,Yes,45,Male,Normal,Low,Negative,Hiroshi Nguyen
+Kidney Disease,Yes,Yes,No,No,45,Male,Normal,High,Negative,Aiko Kumar
+Melanoma,Yes,No,Yes,No,45,Male,High,Normal,Negative,Kaito Lim
+Migraine,No,No,No,No,45,Female,Low,Normal,Negative,Mai Kumar
+Ovarian Cancer,No,No,Yes,No,45,Male,Normal,Normal,Negative,Nari Cheng
+Pancreatitis,No,Yes,Yes,Yes,45,Male,Normal,Low,Negative,Wei Cheng
+Rheumatoid Arthritis,Yes,No,No,No,45,Male,Normal,Normal,Negative,Chen Kim
+Stroke,No,No,Yes,No,45,Male,Normal,Normal,Negative,Sanjay Kumar
+Turner Syndrome,No,No,Yes,No,45,Male,High,High,Negative,Aki Kim
+Turner Syndrome,No,No,Yes,No,45,Male,High,High,Negative,Mai Patel
+Urinary Tract Infection,No,No,No,No,45,Female,Low,Normal,Negative,Hyun Kumar
+Zika Virus,No,Yes,Yes,No,45,Female,High,High,Negative,Nari Nguyen
+Zika Virus,No,Yes,Yes,No,45,Female,High,High,Negative,Mei Nguyen
+Allergic Rhinitis,Yes,Yes,Yes,No,45,Male,High,Normal,Positive,Hyun Cheng
+Anxiety Disorders,Yes,Yes,Yes,No,45,Male,High,Normal,Positive,Sunita Kumar
+Asthma,Yes,Yes,No,Yes,45,Male,Normal,Normal,Positive,Jun Kim
+Asthma,Yes,Yes,No,Yes,45,Male,Normal,Normal,Positive,Sakura Kumar
+Cataracts,No,No,Yes,No,45,Female,Normal,High,Positive,Jun Wang
+Crohn's Disease,No,No,Yes,No,45,Female,High,High,Positive,Mei Patel
+Crohn's Disease,Yes,Yes,Yes,No,45,Female,High,High,Positive,Hyun Patel
+Depression,No,No,Yes,No,45,Female,High,High,Positive,Jia Cheng
+Diabetes,Yes,No,Yes,No,45,Female,High,High,Positive,Sakura Cheng
+Diabetes,No,Yes,Yes,No,45,Male,Normal,High,Positive,Wei Kim
+Hypertension,Yes,No,Yes,No,45,Male,Normal,High,Positive,Hiroshi Patel
+Hypothyroidism,No,No,Yes,No,45,Female,High,High,Positive,Mai Wang
+Liver Disease,Yes,Yes,Yes,No,45,Female,Normal,High,Positive,Aiko Lee
+Multiple Sclerosis,Yes,No,No,No,45,Female,High,High,Positive,Mai Patel
+Multiple Sclerosis,Yes,No,No,No,45,Female,High,High,Positive,Sakura Patel
+Osteoarthritis,Yes,No,Yes,Yes,45,Male,High,Normal,Positive,Jun Kumar
+Osteoporosis,Yes,Yes,Yes,No,45,Female,Normal,High,Positive,Aiko Wang
+Pneumocystis Pneumonia (PCP),Yes,Yes,Yes,No,45,Female,High,High,Positive,Aiko Nguyen
+Pneumonia,Yes,Yes,Yes,Yes,45,Male,High,High,Positive,Ravi Kim
+Scoliosis,No,No,No,No,45,Female,High,High,Positive,Aiko Cheng
+Sickle Cell Anemia,No,No,Yes,No,45,Female,Normal,Normal,Positive,Sakura Lee
+Tetanus,No,No,Yes,No,45,Male,Normal,High,Positive,Sanjay Nguyen
+Tetanus,No,No,Yes,No,45,Male,Normal,High,Positive,Kaito Patel
+Hypertension,No,No,No,No,48,Female,Low,High,Negative,Sakura Wang
+Hypothyroidism,No,No,Yes,No,48,Male,Normal,High,Negative,Kaito Tanaka
+Hypothyroidism,No,No,Yes,No,48,Male,Normal,High,Negative,Sakura Nguyen
+Allergic Rhinitis,Yes,No,No,No,50,Male,High,High,Negative,Hyun Patel
+Anemia,No,No,Yes,No,50,Male,Normal,Normal,Negative,Aki Yamamoto
+Anxiety Disorders,No,No,Yes,No,50,Male,Normal,Normal,Negative,Jun Lim
+Cholera,Yes,No,Yes,Yes,50,Female,High,High,Negative,Ravi Nguyen
+Cholera,Yes,No,Yes,Yes,50,Female,High,High,Negative,Jia Tanaka
+Crohn's Disease,Yes,Yes,Yes,No,50,Male,Normal,High,Negative,Chen Nguyen
+Crohn's Disease,No,No,Yes,No,50,Male,Normal,High,Negative,Ravi Wang
+Depression,No,Yes,Yes,No,50,Female,Low,Low,Negative,Minh Yamamoto
+Diabetes,No,Yes,No,No,50,Male,Normal,High,Negative,Mei Kumar
+Endometriosis,Yes,No,No,No,50,Male,High,Normal,Negative,Hiroshi Kumar
+Hypertension,No,Yes,No,No,50,Female,Normal,Low,Negative,Aiko Cheng
+Hypothyroidism,Yes,Yes,Yes,No,50,Male,Normal,High,Negative,Priya Cheng
+Kidney Cancer,No,Yes,No,No,50,Male,Low,High,Negative,Mei Wang
+Kidney Disease,No,Yes,No,Yes,50,Male,Normal,Normal,Negative,Aki Kumar
+Pancreatitis,No,Yes,No,No,50,Male,Low,High,Negative,Kaito Lee
+Rheumatoid Arthritis,No,Yes,No,No,50,Female,Low,Normal,Negative,Hyun Wang
+Sepsis,Yes,Yes,Yes,No,50,Male,Normal,Normal,Negative,Aki Lee
+Sleep Apnea,Yes,No,Yes,Yes,50,Male,High,High,Negative,Sakura Tanaka
+Urinary Tract Infection,Yes,Yes,No,Yes,50,Male,High,Normal,Negative,Mei Yamamoto
+Asthma,Yes,Yes,Yes,Yes,50,Female,Normal,High,Positive,Nari Cheng
+Bronchitis,Yes,Yes,Yes,Yes,50,Male,High,High,Positive,Aki Yamamoto
+Down Syndrome,No,No,Yes,No,50,Female,High,High,Positive,Yuna Nguyen
+Ebola Virus,Yes,Yes,Yes,Yes,50,Male,Normal,Normal,Positive,Hyun Wang
+Ebola Virus,Yes,Yes,Yes,Yes,50,Male,Normal,Normal,Positive,Sakura Wang
+Eczema,No,Yes,No,No,50,Female,High,High,Positive,Hana Cheng
+Gastroenteritis,Yes,Yes,Yes,Yes,50,Female,High,Normal,Positive,Minh Tanaka
+Klinefelter Syndrome,No,No,Yes,No,50,Female,Normal,Normal,Positive,Sakura Kim
+Liver Cancer,No,Yes,Yes,Yes,50,Male,High,High,Positive,Mei Lee
+Lyme Disease,Yes,No,No,No,50,Male,Normal,High,Positive,Mei Kim
+Lyme Disease,Yes,No,No,No,50,Male,Normal,High,Positive,Chen Cheng
+Pancreatic Cancer,No,No,Yes,No,50,Female,High,High,Positive,Chen Yamamoto
+Pneumothorax,No,No,Yes,Yes,50,Female,High,High,Positive,Mei Yamamoto
+Stroke,No,Yes,Yes,Yes,50,Male,High,High,Positive,Chen Cheng
+Ulcerative Colitis,No,Yes,Yes,No,50,Female,Normal,High,Positive,Sanjay Nguyen
+Hypertension,Yes,Yes,No,No,52,Male,Normal,Low,Negative,Sakura Yamamoto
+Multiple Sclerosis,No,Yes,Yes,No,52,Male,Normal,Normal,Negative,Kaito Lee
+Multiple Sclerosis,No,Yes,Yes,No,52,Male,Normal,Normal,Negative,Yuna Kumar
+Appendicitis,Yes,No,Yes,No,55,Male,Normal,Normal,Negative,Priya Cheng
+Bronchitis,No,No,Yes,Yes,55,Male,High,High,Negative,Wei Kumar
+Bronchitis,Yes,Yes,Yes,Yes,55,Male,High,Normal,Negative,Chen Nguyen
+Common Cold,Yes,No,Yes,Yes,55,Male,Normal,Low,Negative,Sakura Lee
+Diabetes,No,Yes,No,No,55,Female,Normal,High,Negative,Nari Tanaka
+Esophageal Cancer,No,No,Yes,No,55,Male,Normal,Normal,Negative,Jia Lim
+HIV/AIDS,Yes,No,No,No,55,Female,High,High,Negative,Jia Nguyen
+HIV/AIDS,Yes,No,No,No,55,Female,High,High,Negative,Hana Lim
+Hypertension,No,Yes,No,No,55,Female,Normal,Low,Negative,Kaito Kim
+Liver Disease,No,Yes,Yes,No,55,Male,High,Low,Negative,Chen Cheng
+Marfan Syndrome,No,No,Yes,No,55,Male,High,High,Negative,Nari Tanaka
+Migraine,No,Yes,Yes,Yes,55,Female,Normal,Low,Negative,Hiroshi Nguyen
+Osteoporosis,No,No,Yes,No,55,Male,High,Normal,Negative,Chen Nguyen
+Parkinson's Disease,No,No,Yes,No,55,Female,Normal,Low,Negative,Minh Patel
+Parkinson's Disease,No,No,Yes,No,55,Female,Normal,Low,Negative,Wei Wang
+Anxiety Disorders,Yes,Yes,No,No,55,Female,Normal,Low,Positive,Ravi Lim
+Coronary Artery Disease,No,No,Yes,No,55,Female,Normal,Normal,Positive,Nari Kim
+Coronary Artery Disease,No,No,Yes,No,55,Female,Normal,Normal,Positive,Jia Yamamoto
+Hemorrhoids,No,No,No,No,55,Female,High,High,Positive,Yuna Nguyen
+Hypertension,Yes,No,Yes,No,55,Male,High,Normal,Positive,Priya Lim
+Hypothyroidism,No,No,Yes,No,55,Female,High,High,Positive,Priya Nguyen
+Osteoarthritis,Yes,Yes,No,No,55,Female,High,High,Positive,Sanjay Wang
+Osteoporosis,Yes,No,Yes,Yes,55,Male,High,Low,Positive,Aki Yamamoto
+Osteoporosis,No,Yes,Yes,No,55,Female,Normal,Normal,Positive,Ravi Patel
+Osteoporosis,Yes,No,Yes,No,55,Female,Normal,Normal,Positive,Hana Lim
+Osteoporosis,Yes,No,Yes,No,55,Female,Normal,Normal,Positive,Jun Cheng
+Polycystic Ovary Syndrome (PCOS),Yes,Yes,No,No,55,Female,Normal,Normal,Positive,Ravi Kim
+Systemic Lupus Erythematosus...,No,Yes,Yes,No,55,Female,High,High,Positive,Jia Patel
+Typhoid Fever,No,Yes,No,No,55,Male,Normal,Low,Positive,Jia Cheng
+Typhoid Fever,No,Yes,No,No,55,Male,Normal,Low,Positive,Mai Lee
+Influenza,Yes,Yes,Yes,Yes,56,Male,High,High,Positive,Mei Lim
+Pneumonia,Yes,Yes,No,Yes,57,Male,Normal,High,Negative,Nari Cheng
+Breast Cancer,No,No,Yes,No,60,Male,High,High,Negative,Sakura Cheng
+Coronary Artery Disease,Yes,Yes,No,No,60,Male,High,High,Negative,Jia Patel
+Coronary Artery Disease,Yes,Yes,No,No,60,Male,High,High,Negative,Sunita Lim
+Hyperthyroidism,No,No,Yes,No,60,Male,Normal,Normal,Negative,Hyun Nguyen
+Measles,Yes,Yes,No,No,60,Female,High,Normal,Negative,Hyun Cheng
+Measles,Yes,Yes,No,No,60,Female,High,Normal,Negative,Sunita Nguyen
+Osteoarthritis,No,Yes,No,Yes,60,Female,Normal,Normal,Negative,Hyun Lim
+Osteomyelitis,No,No,Yes,No,60,Male,Normal,Normal,Negative,Hiroshi Kumar
+Osteoporosis,Yes,No,No,No,60,Male,High,High,Negative,Ravi Kumar
+Osteoporosis,No,Yes,No,No,60,Male,High,High,Negative,Mei Tanaka
+Osteoporosis,No,Yes,No,No,60,Male,High,High,Negative,Mai Kim
+Polio,Yes,Yes,Yes,No,60,Male,Normal,Normal,Negative,Sanjay Patel
+Asthma,Yes,Yes,Yes,Yes,60,Female,High,High,Positive,Ravi Yamamoto
+Chronic Kidney Disease,No,No,Yes,No,60,Female,Normal,High,Positive,Sanjay Nguyen
+Hemophilia,No,No,Yes,No,60,Female,Normal,Normal,Positive,Hiroshi Yamamoto
+Hepatitis B,No,Yes,Yes,No,60,Male,Normal,Low,Positive,Sakura Tanaka
+Hepatitis B,No,Yes,Yes,No,60,Male,Normal,Low,Positive,Mai Lim
+Hypertension,No,No,Yes,No,60,Female,High,Normal,Positive,Sakura Wang
+Hypertension,Yes,No,Yes,No,60,Male,High,Normal,Positive,Minh Yamamoto
+Hypertension,No,No,No,No,60,Female,High,High,Positive,Priya Lee
+Kidney Cancer,Yes,Yes,Yes,No,60,Female,High,Normal,Positive,Wei Lee
+Kidney Disease,Yes,Yes,Yes,Yes,60,Female,High,High,Positive,Priya Lim
+Osteoporosis,Yes,No,Yes,No,60,Male,High,Normal,Positive,Wei Tanaka
+Pancreatitis,Yes,Yes,Yes,No,60,Female,High,Normal,Positive,Chen Yamamoto
+Parkinson's Disease,Yes,Yes,No,No,60,Male,High,Normal,Positive,Sakura Cheng
+Parkinson's Disease,Yes,Yes,No,No,60,Male,High,Normal,Positive,Mai Lee
+Prader-Willi Syndrome,No,No,Yes,No,60,Female,Normal,Normal,Positive,Ravi Lim
+Rheumatoid Arthritis,No,No,Yes,No,60,Female,High,High,Positive,Ravi Kumar
+Thyroid Cancer,No,No,Yes,No,60,Female,High,High,Positive,Sakura Lim
+Tuberculosis,Yes,Yes,Yes,No,60,Female,High,High,Positive,Wei Yamamoto
+Bladder Cancer,No,No,Yes,No,65,Male,Normal,Normal,Negative,Mei Yamamoto
+Diabetes,No,No,Yes,No,65,Male,Normal,High,Negative,Kaito Lim
+Otitis Media (Ear Infection),Yes,Yes,Yes,No,65,Male,Normal,Normal,Negative,Sanjay Lee
+Stroke,Yes,No,Yes,No,65,Female,High,Low,Negative,Mai Wang
+Stroke,Yes,No,Yes,No,65,Female,High,Low,Negative,Priya Lee
+Tourette Syndrome,No,No,Yes,No,65,Male,High,High,Negative,Yuna Wang
+Urinary Tract Infection (UTI),Yes,No,Yes,No,65,Male,High,Normal,Negative,Hiroshi Yamamoto
+Alzheimer's Disease,No,Yes,No,No,65,Male,Normal,High,Positive,Sanjay Lim
+Alzheimer's Disease,No,Yes,No,No,65,Male,Normal,High,Positive,Kaito Wang
+Alzheimer's Disease,No,No,Yes,No,65,Female,High,High,Positive,Hyun Yamamoto
+Bronchitis,Yes,No,Yes,Yes,65,Male,High,High,Positive,Mei Nguyen
+Chronic Obstructive Pulmonary Disease (COPD),Yes,No,Yes,Yes,65,Female,High,High,Positive,Jia Tanaka
+Chronic Obstructive Pulmonary Disease (COPD),Yes,No,Yes,Yes,65,Female,High,High,Positive,Mei Yamamoto
+Dementia,No,No,Yes,No,65,Female,High,High,Positive,Hyun Yamamoto
+Diabetes,Yes,Yes,Yes,No,65,Female,Normal,High,Positive,Hyun Kim
+Diverticulitis,No,No,Yes,No,65,Female,High,High,Positive,Sunita Wang
+Liver Cancer,Yes,Yes,Yes,No,65,Female,High,High,Positive,Mai Wang
+Lung Cancer,Yes,Yes,Yes,No,65,Female,High,High,Positive,Aiko Nguyen
+Lung Cancer,Yes,No,Yes,No,65,Female,Normal,High,Positive,Hiroshi Wang
+Mumps,No,No,Yes,No,65,Male,Normal,High,Positive,Wei Nguyen
+Mumps,No,No,Yes,No,65,Male,Normal,High,Positive,Minh Wang
+Osteoporosis,No,Yes,Yes,No,65,Female,High,High,Positive,Nari Patel
+Stroke,Yes,Yes,Yes,No,65,Female,High,High,Positive,Ravi Patel
+Alzheimer's Disease,Yes,No,Yes,No,70,Female,High,Normal,Negative,Sunita Kim
+Alzheimer's Disease,Yes,No,Yes,No,70,Female,High,Normal,Negative,Yuna Nguyen
+Cholecystitis,No,No,Yes,No,70,Male,Normal,Normal,Negative,Jia Kumar
+Chronic Obstructive Pulmonary Disease (COPD),No,Yes,Yes,Yes,70,Male,Normal,High,Negative,Aiko Patel
+Chronic Obstructive Pulmonary Disease (COPD),No,Yes,Yes,Yes,70,Male,Normal,High,Negative,Nari Lee
+Osteoporosis,Yes,No,No,No,70,Male,Normal,Normal,Negative,Aki Patel
+Parkinson's Disease,No,No,Yes,No,70,Male,Normal,Normal,Negative,Chen Kim
+Prostate Cancer,Yes,Yes,No,No,70,Male,High,Normal,Negative,Yuna Wang
+Schizophrenia,No,Yes,Yes,No,70,Male,Normal,Normal,Negative,Chen Lee
+Gout,Yes,No,Yes,No,70,Female,Normal,High,Positive,Priya Yamamoto
+Migraine,No,No,Yes,No,70,Female,Normal,Normal,Positive,Minh Kim
+Stroke,No,Yes,No,No,70,Male,Normal,High,Positive,Yuna Nguyen
+Stroke,No,Yes,No,No,70,Male,Normal,High,Positive,Aki Kumar
+Testicular Cancer,No,No,Yes,No,70,Female,High,High,Positive,Nari Kim
+Tonsillitis,Yes,Yes,Yes,No,70,Female,High,High,Positive,Yuna Wang
+Williams Syndrome,No,No,Yes,No,70,Female,Normal,Normal,Positive,Aiko Cheng
+Stroke,Yes,No,Yes,No,80,Female,High,High,Positive,Sakura Tanaka
+Stroke,Yes,No,Yes,No,80,Female,High,High,Positive,Hiroshi Cheng
+Stroke,Yes,No,Yes,No,85,Male,High,High,Positive,Mei Wang
+Stroke,Yes,No,Yes,No,85,Male,High,High,Positive,Sakura Lim
+Stroke,Yes,No,Yes,No,90,Female,High,High,Positive,Aki Yamamoto
+Stroke,Yes,No,Yes,No,90,Female,High,High,Positive,Aiko Lim
