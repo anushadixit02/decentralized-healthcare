@@ -1,0 +1,273 @@
+console.log("Is Patient?", isPatient); // should be true
+const isPatient = await contract.patients("0xabcdef1234567890abcdef1234567890abcdef12");
+await contract.addPatient("0xabcdef1234567890abcdef1234567890abcdef12");
+console.log("Is Patient?", isPatient);
+const isPatient = await contract.patients("0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266");
+// Verify:
+await contract.addPatient("0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266");
+console.log("Is Doctor?", isDoctor);
+const isDoctor = await contract.doctors("0x70997970C51812dc3A010C7d01b50e0d17dc79C8");
+await contract.addDoctor("0x70997970C51812dc3A010C7d01b50e0d17dc79C8");
+const contract = await ethers.getContractAt("HealthcareDataset", contractAddress);
+const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";  // your deployed contract address
+console.log(wallet.address);
+const wallet = new ethers.Wallet("0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d");
+await contract.addDoctor("0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d");
+ethers.provider.resolveName = async (name) => name;
+await contract.addDoctor("0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d");
+const contract = await ethers.getContractAt("HealthcareDataset","0x5FbDB2315678afecb367f032d93F642f64180aa3");
+);
+  "YOUR_DEPLOYED_CONTRACT_ADDRESS"
+  "HealthcareDataset",
+const contract = await ethers.getContractAt(
+await contract.addPatient("0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266");
+const contract = await ethers.getContractAt("HealthcareDataset", contractAddress);
+const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+const ownerAddress = await contract.owner();
+const contract = await ethers.getContractAt("HealthcareDataset", "0x5FbDB2315678afecb367f032d93F642f64180aa3");
+const tx = await contract.addDoctor(doctorAddress);
+const doctorAddress = ethers.getAddress("0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266");
+console.log("Contract owner:", await contract.owner());
+const contract = new ethers.Contract(contractAddress, contractABI, ownerSigner);
+ownerSigner.getAddress = async () => ownerWallet.address;
+ownerSigner.resolveName = async () => null;
+const ownerSigner = ownerWallet.connect(provider);
+const ownerWallet = new ethers.Wallet("0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d", provider);
+provider.getResolver = async () => { throw new Error("ENS is not supported on Hardhat network"); };
+const provider = new ethers.JsonRpcProvider("http://127.0.0.1:8545");
+];
+  "function getPatientRecords(address _patient) public view returns (string[] memory)"
+  "function storePatientRecord(address _patient, string memory _encryptedHash) public",
+  "function addPatient(address _patient) public",
+  "function isDoctor(address _doctor) public view returns (bool)",
+  "function addDoctor(address _doctor) public",
+  "function owner() public view returns (address)",
+const contractABI = [
+const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+const contractAddress = "0xYourDeployedContractAddress";
+const doctorAddress = ethers.getAddress("0x1234567890abcdef1234567890abcdef12345678");
+console.log("Contract owner:", await contract.owner());
+const contract = new ethers.Contract(contractAddress, contractABI, ownerSigner);
+ownerSigner.getAddress = async () => ownerWallet.address;
+ownerSigner.resolveName = async () => null;
+const ownerSigner = ownerWallet.connect(provider);
+const ownerWallet = new ethers.Wallet("0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d", provider);
+provider.getResolver = async () => { throw new Error("ENS is not supported on Hardhat network"); };
+const provider = new ethers.JsonRpcProvider("http://127.0.0.1:8545");
+];
+  "function getPatientRecords(address _patient) public view returns (string[] memory)"
+  "function storePatientRecord(address _patient, string memory _encryptedHash) public",
+  "function addPatient(address _patient) public",
+  "function isDoctor(address _doctor) public view returns (bool)",
+  "function addDoctor(address _doctor) public",
+  "function owner() public view returns (address)",
+const contractABI = [
+const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+console.log("Contract owner:", ownerAddress);
+const ownerAddress = await contract.owner();
+const contract = new ethers.Contract(contractAddress, contractABI, signer);
+const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+signer.getAddress = async () => wallet.address;
+signer.resolveName = async () => null;
+const signer = wallet.connect(provider);
+const wallet = new ethers.Wallet("0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d", provider);
+const provider = new ethers.JsonRpcProvider("http://127.0.0.1:8545");
+// Use the same signer that your backend uses:
+];
+    "function getPatientRecords(address _patient) public view returns (string[] memory)"
+    "function storePatientRecord(address _patient, string memory _encryptedHash) public",
+    "function isDoctor(address _doctor) public view returns (bool)",
+    "function addDoctor(address _doctor) public",
+    "function owner() public view returns (address)",
+const contractABI = [
+// In Hardhat console (npx hardhat console --network localhost)
+console.log("Doctor exists:", isDoctor);
+const isDoctor = await contract.isDoctor(doctorAddress);
+// Verify that the doctor is now registered
+console.log("✅ Doctor added successfully!");
+await tx.wait();
+const tx = await contract.addDoctor(doctorAddress);
+// Call addDoctor from the owner's account
+const doctorAddress = ethers.getAddress("0x1234567890abcdef1234567890abcdef12345678");
+// Convert doctor address to checksum format
+console.log("Contract loaded with owner:", await ownerSigner.getAddress());
+const contract = new ethers.Contract(contractAddress, contractABI, ownerSigner);
+// Load the contract with the owner's signer
+const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+];
+  "function getPatientRecords(address _patient) public view returns (string[] memory)"
+  "function storePatientRecord(address _patient, string memory _encryptedHash) public",
+  "function isDoctor(address _doctor) public view returns (bool)",
+  "function addDoctor(address _doctor) public",
+const contractABI = [
+// Define contract ABI and address
+ownerSigner.getAddress = async () => ownerWallet.address;
+ownerSigner.resolveName = async () => null;
+const ownerSigner = ownerWallet.connect(provider);
+const ownerWallet = new ethers.Wallet("0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d", provider);
+// Create owner's wallet using the owner's private key
+provider.getResolver = async () => { throw new Error("ENS is not supported on Hardhat network"); };
+const provider = new ethers.JsonRpcProvider("http://127.0.0.1:8545");
+// Set up provider and disable ENS resolution
+console.log("Doctor exists:", isDoctor);
+const isDoctor = await contract.isDoctor(doctorAddress);
+// Verify that the doctor is now registered
+console.log("✅ Doctor added successfully!");
+await tx.wait();
+const tx = await contract.addDoctor(doctorAddress);
+// Call addDoctor using the owner's signer
+const doctorAddress = ethers.getAddress("0x1234567890abcdef1234567890abcdef12345678");
+// Convert the doctor address to checksum format
+}
+  console.log("Contract deployed; bytecode length:", code.length);
+} else {
+  console.log("No contract deployed at this address!"); 
+if(code === "0x") { 
+const code = await provider.getCode(contractAddress);
+// Optionally, check that the contract is deployed:
+const contract = new ethers.Contract(contractAddress, contractABI, ownerSigner);
+// Load the contract using the owner's signer
+const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+// Use your actual deployed contract address
+];
+  "function getPatientRecords(address _patient) public view returns (string[] memory)"
+  "function storePatientRecord(address _patient, string memory _encryptedHash) public",
+  "function isDoctor(address _doctor) public view returns (bool)",
+  "function addDoctor(address _doctor) public",
+  "function owner() public view returns (address)",
+const contractABI = [
+// Define the contract ABI (including the owner getter if needed)
+ownerSigner.getAddress = async () => ownerWallet.address;
+ownerSigner.resolveName = async () => null;
+// Disable ENS for the signer as well
+const ownerSigner = ownerWallet.connect(provider);
+const ownerWallet = new ethers.Wallet("0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d", provider);
+// Create the owner wallet using the owner's private key
+provider.getResolver = async () => { throw new Error("ENS is not supported on Hardhat network"); };
+const provider = new ethers.JsonRpcProvider("http://127.0.0.1:8545");
+// Set up provider and disable ENS resolution
+const contract = new ethers.Contract(contractAddress, contractABI, ownerSigner);
+const contractAddress = "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9";
+// Replace with your deployed contract address
+];
+  "function owner() public view returns (address)"
+  "function getPatientRecords(address _patient) public view returns (string[] memory)",
+  "function storePatientRecord(address _patient, string memory _encryptedHash) public",
+  "function isDoctor(address _doctor) public view returns (bool)",
+  "function addDoctor(address _doctor) public",
+const contractABI = [
+ownerSigner.getAddress = async () => ownerWallet.address;
+ownerSigner.resolveName = async () => null;
+const ownerSigner = ownerWallet.connect(provider);
+const ownerWallet = new ethers.Wallet(ownerPrivateKey, provider);
+provider.getResolver = async () => { throw new Error("ENS is not supported on Hardhat network"); };
+const provider = new ethers.JsonRpcProvider("http://127.0.0.1:8545");
+const ownerPrivateKey = "YOUR_OWNER_PRIVATE_KEY";
+// Replace with your actual owner's private key
+const provider = new ethers.JsonRpcProvider("http://127.0.0.1:8545");
+console.log("Deployed contract code:", code);
+const code = await provider.getCode("0x5FbDB2315678afecb367f032d93F642f64180aa3");
+const provider = new ethers.JsonRpcProvider("http://127.0.0.1:8545");
+console.log("Contract owner:", owner);
+const owner = await contract.owner();
+const tx = await contract.addDoctor(doctorAddress);
+const doctorAddress = ethers.getAddress("0x1234567890abcdef1234567890abcdef12345678");
+const contract = new ethers.Contract("0x5FbDB2315678afecb367f032d93F642f64180aa3", contractABI, ownerSigner);
+const ownerSigner = ownerWallet.connect(provider);
+const ownerWallet = new ethers.Wallet("0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d", provider);
+const signer = wallet.connect(provider);
+const wallet = new ethers.Wallet("0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d", provider);
+const wallet = new ethers.Wallet("YOUR_OWNER_PRIVATE_KEY", provider); // Use the owner's private key
+const provider = new ethers.JsonRpcProvider("http://127.0.0.1:8545");
+const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3"; 
+];
+    "function getPatientRecords(address _patient) public view returns (string[] memory)"
+    "function storePatientRecord(address _patient, string memory _encryptedHash) public",
+    "function isDoctor(address _doctor) public view returns (bool)",
+    "function addDoctor(address _doctor) public",
+const contractABI = [
+await tx2.wait();
+let tx2 = await contract.addDoctor(doctorAddress);
+const doctorAddress = ethers.getAddress("0x70997970c51812dc3a010c7d01b50e0d17dc79c8");
+console.log("✅ Doctor added successfully!");
+await tx.wait();
+const tx = await contract.addDoctor(doctorAddress);
+const doctorAddress = ethers.getAddress("0x70997970c51812dc3a010c7d01b50e0d17dc79c8");
+console.log("✅ Doctor added successfully!");
+await tx.wait();
+const tx = await contract.addDoctor("0x70997970c51812dc3a010c7d01b50e0d17dc79c8");
+// Now, add the doctor:
+console.log("✅ Contract loaded successfully!");
+const contract = new ethers.Contract(contractAddress, contractABI, signer);
+// Load the contract
+signer.getAddress = async () => wallet.address;
+signer.resolveName = async () => null;
+const signer = wallet.connect(provider);
+// Connect the signer and disable ENS for it
+const wallet = new ethers.Wallet("0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d", provider);
+// Use the owner's private key (replace with your owner's private key)
+provider.getResolver = async () => { throw new Error("ENS is not supported on Hardhat network"); };
+const provider = new ethers.JsonRpcProvider("http://127.0.0.1:8545");
+// Set up provider and disable ENS resolution
+];
+  "function getPatientRecords(address _patient) public view returns (string[] memory)"
+  "function storePatientRecord(address _patient, string memory _encryptedHash) public",
+  "function isDoctor(address _doctor) public view returns (bool)",
+  "function addDoctor(address _doctor) public",
+const contractABI = [
+const contractAddress = "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9";
+// Replace YOUR_CONTRACT_ADDRESS with the actual address:
+const contract = new ethers.Contract(contractAddress, contractABI, signer);
+const signer = wallet.connect(provider);
+const wallet = new ethers.Wallet("0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d", provider);  // Use the owner's private key
+const provider = new ethers.JsonRpcProvider("http://127.0.0.1:8545");
+const contractAddress = "YOUR_CONTRACT_ADDRESS";
+];
+    "function getPatientRecords(address _patient) public view returns (string[] memory)"
+    "function storePatientRecord(address _patient, string memory _encryptedHash) public",
+    "function isDoctor(address _doctor) public view returns (bool)",
+    "function addDoctor(address _doctor) public",
+const contractABI = [
+const provider = new ethers.JsonRpcProvider("http://127.0.0.1:8545");
+console.log("✅ Contract Loaded Successfully!");
+contract = new ethers.Contract(contractAddress, contractABI, signer);
+console.log("✅ Contract Loaded Successfully!");
+const contract = new ethers.Contract(contractAddress, contractABI, signer);
+];
+    "function getPatientRecords(address _patient) public view returns (string[] memory)"
+    "function storePatientRecord(address _patient, string memory _encryptedHash) public",
+    "function isDoctor(address _doctor) public view returns (bool)",
+    "function addDoctor(address _doctor) public",
+const contractABI = [
+const signer = await provider.getSigner(0); // Get the first account in Hardhat node
+const provider = new ethers.JsonRpcProvider("http://127.0.0.1:8545");
+const contractAddress = "YOUR_CONTRACT_ADDRESS_HERE"; // Replace with actual deployed contract address
+const { ethers } = require("hardhat");
+await contract.addDoctor("0x70997970C51812dc3A010C7d01b50e0d17dc79C8"); // Replace with the actual doctor’s wallet address
+const contract = await ethers.getContractAt("HealthcareDataset", "YOUR_CONTRACT_ADDRESS_HERE");
+console.log("Smart Contract Methods:", Object.keys(contract.functions));
+console.log("✅ Contract Loaded Successfully!");
+];const contract = new ethers.Contract("0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9", contractABI, provider);
+    "function isDoctor(address _doctor) public view returns (bool)"
+    "function addDoctor(address _doctor) public",
+const contractABI = [
+console.log(code);
+const code = await provider.getCode("0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9");
+const provider = new ethers.JsonRpcProvider("http://127.0.0.1:8545");
+console.log(await contract.functions);
+console.log("Doctor exists:", isDoctor);
+const isDoctor = await contract.isDoctor("0x70997970C51812dc3A010C7d01b50e0d17dc79C8");
+console.log("Doctor exists:", isDoctor);const contract = await ethers.getContractAt("HealthcareDataset", "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9");
+const isDoctor = await contract.isDoctor("0x70997970C51812dc3A010C7d01b50e0d17dc79C8");
+onst contract = await ethers.getContractAt("HealthcareDataset", "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9");
+console.log("✅ Doctor added successfully!");
+await tx.wait();
+const tx = await myContract.addDoctor("0x70997970C51812dc3A010C7d01b50e0d17dc79C8");
+const myContract = await ethers.getContractAt("HealthcareDataset", "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9");
+const contract = await ethers.getContractAt("HealthcareDataset", "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9");
+console.log(code);
+const code = await provider.getCode("0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9");
+const provider = new ethers.JsonRpcProvider("http://127.0.0.1:8545");
+const contract = await ethers.getContractAt("HealthcareDataset", "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9");der = new ethers.JsonRpcProvider("http://127.0.0.1:8545");
+const contract = await ethers.getContractAt("HealthcareDataset", "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9");

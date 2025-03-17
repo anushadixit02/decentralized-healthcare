@@ -3,7 +3,7 @@ import axios from "axios";
 import styled from "styled-components";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const backendURL = "http://localhost:3000"; // Change if deploying
+const backendURL = "http://localhost:3000";
 
 // Styled Components for UI Enhancements
 const Container = styled.div`
@@ -44,8 +44,9 @@ const Card = styled.div`
 function App() {
   const [user, setUser] = useState(null);
   const [records, setRecords] = useState([]);
-  const [patient, setPatient] = useState({
-    patientID: "",
+  const [loginData, setLoginData] = useState({ email: "", password: "" });
+  const [recordData, setRecordData] = useState({
+    patientAddress: "",
     patientName: "",
     age: "",
     gender: "",
@@ -54,40 +55,51 @@ function App() {
   });
 
   useEffect(() => {
-    checkLogin();
-  }, []);
-
-  const checkLogin = () => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     if (storedUser) {
       setUser(storedUser);
-      fetchRecords(storedUser.role);
+      if (storedUser.role === "patient") {
+        fetchRecords(storedUser);
+      }
     }
+  }, []);
+
+  const handleLoginInputChange = (e) => {
+    setLoginData({ ...loginData, [e.target.name]: e.target.value });
   };
 
-  const handleInputChange = (e) => {
-    setPatient({ ...patient, [e.target.name]: e.target.value });
+  const handleRecordInputChange = (e) => {
+    setRecordData({ ...recordData, [e.target.name]: e.target.value });
   };
 
   // 🔐 Login Function
-  const login = async (email, password) => {
+  const login = async () => {
     try {
-      const response = await axios.post(`${backendURL}/login`, { email, password });
+      const response = await axios.post(`${backendURL}/login`, loginData);
       localStorage.setItem("user", JSON.stringify(response.data));
       setUser(response.data);
-      fetchRecords(response.data.role);
+
+      // If the logged-in user is a patient, immediately fetch records
+      if (response.data.role === "patient") {
+        fetchRecords(response.data);
+      }
     } catch (error) {
       alert("❌ Login failed: " + error.response?.data?.error);
     }
   };
 
-  // 📂 Fetch Records (Patient can only view their own)
-  const fetchRecords = async (role) => {
-    if (!user) return;
+  // 📤 Logout Function
+  const logout = () => {
+    localStorage.removeItem("user");
+    setUser(null);
+    setRecords([]);
+  };
 
+  // 📂 Fetch Records for Patient
+  const fetchRecords = async (currentUser = user) => {
     try {
       const response = await axios.get(`${backendURL}/fetchRecords`, {
-        headers: { Authorization: user.token }
+        headers: { Authorization: `Bearer ${currentUser.token}` }
       });
       setRecords(response.data);
     } catch (error) {
@@ -101,18 +113,24 @@ function App() {
       alert("⚠️ Only doctors can add records.");
       return;
     }
-
-    if (!patient.patientID || !patient.patientName || !patient.age || !patient.gender || !patient.symptoms || !patient.diagnosis) {
+    if (
+      !recordData.patientAddress ||
+      !recordData.patientName ||
+      !recordData.age ||
+      !recordData.gender ||
+      !recordData.symptoms ||
+      !recordData.diagnosis
+    ) {
       alert("⚠️ Please fill in all fields.");
       return;
     }
-
     try {
-      const response = await axios.post(`${backendURL}/addRecord`, patient, {
-        headers: { Authorization: user.token }
-      });
+      const response = await axios.post(
+        `${backendURL}/addRecord`,
+        recordData,
+        { headers: { Authorization: `Bearer ${user.token}` } }
+      );
       alert("✅ Patient record stored! IPFS Hash: " + response.data.ipfsHash);
-      fetchRecords(user.role);
     } catch (error) {
       console.error("❌ Error storing patient record:", error);
       alert("❌ Failed to store record.");
@@ -122,57 +140,123 @@ function App() {
   return (
     <div className="container mt-5">
       <Container>
-        <h1 className="text-center text-primary">Decentralized Healthcare Records</h1>
-
-        {/* Login Form */}
+        <h1 className="text-center text-primary">
+          Decentralized Healthcare Records
+        </h1>
         {!user ? (
           <>
             <h2>🔑 Login</h2>
-            <input type="email" placeholder="Email" onChange={(e) => setPatient({ ...patient, email: e.target.value })} className="form-control" />
-            <input type="password" placeholder="Password" onChange={(e) => setPatient({ ...patient, password: e.target.value })} className="form-control mt-2" />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              onChange={handleLoginInputChange}
+              className="form-control"
+            />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              onChange={handleLoginInputChange}
+              className="form-control mt-2"
+            />
             <div className="text-center">
-              <Button onClick={() => login(patient.email, patient.password)}>🔓 Login</Button>
+              <Button onClick={login}>🔓 Login</Button>
             </div>
           </>
         ) : (
           <>
-            <h2 className="mt-4">📌 Welcome, {user.role === "doctor" ? "Doctor" : "Patient"}</h2>
+            <h2 className="mt-4">
+              📌 Welcome, {user.role === "doctor" ? "Doctor" : "Patient"}
+            </h2>
 
-            {/* Doctor's Form to Add Patient Record */}
+            {/* Doctor: Store New Patient Record */}
             {user.role === "doctor" && (
               <>
                 <h2 className="mt-4">📌 Store New Patient Record</h2>
-                <input type="text" name="patientID" placeholder="Patient Wallet Address" className="form-control" onChange={handleInputChange} />
-                <input type="text" name="patientName" placeholder="Patient Name" className="form-control mt-2" onChange={handleInputChange} />
-                <input type="number" name="age" placeholder="Age" className="form-control mt-2" onChange={handleInputChange} />
-                <select name="gender" className="form-control mt-2" onChange={handleInputChange}>
+                <input
+                  type="text"
+                  name="patientAddress"
+                  placeholder="Patient Wallet Address"
+                  className="form-control"
+                  onChange={handleRecordInputChange}
+                />
+                <input
+                  type="text"
+                  name="patientName"
+                  placeholder="Patient Name"
+                  className="form-control mt-2"
+                  onChange={handleRecordInputChange}
+                />
+                <input
+                  type="number"
+                  name="age"
+                  placeholder="Age"
+                  className="form-control mt-2"
+                  onChange={handleRecordInputChange}
+                />
+                <select
+                  name="gender"
+                  className="form-control mt-2"
+                  onChange={handleRecordInputChange}
+                >
                   <option value="">Select Gender</option>
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
                   <option value="Other">Other</option>
                 </select>
-                <input type="text" name="symptoms" placeholder="Symptoms" className="form-control mt-2" onChange={handleInputChange} />
-                <input type="text" name="diagnosis" placeholder="Diagnosis" className="form-control mt-2" onChange={handleInputChange} />
+                <input
+                  type="text"
+                  name="symptoms"
+                  placeholder="Symptoms"
+                  className="form-control mt-2"
+                  onChange={handleRecordInputChange}
+                />
+                <input
+                  type="text"
+                  name="diagnosis"
+                  placeholder="Diagnosis"
+                  className="form-control mt-2"
+                  onChange={handleRecordInputChange}
+                />
                 <div className="text-center">
-                  <Button onClick={submitPatientRecord}>🩺 Store Patient Record</Button>
+                  <Button onClick={submitPatientRecord}>
+                    🩺 Store Patient Record
+                  </Button>
                 </div>
               </>
             )}
 
-            {/* Patient's Records */}
-            <h2 className="mt-4">📂 Your Medical Records:</h2>
-            {records.length > 0 ? (
-              records.map((record, index) => (
-                <Card key={index}>
-                  <h5>👤 {record.patientName}</h5>
-                  <p><strong>🆔 Age:</strong> {record.age} | <strong>⚧ Gender:</strong> {record.gender}</p>
-                  <p><strong>🔬 Diagnosis:</strong> {record.diagnosis}</p>
-                  <p><strong>🤒 Symptoms:</strong> {record.symptoms}</p>
-                </Card>
-              ))
-            ) : (
-              <p className="text-muted">No records found.</p>
+            {/* Patient: View Medical Records */}
+            {user.role === "patient" && (
+              <>
+                <h2 className="mt-4">📂 Your Medical Records:</h2>
+                {records.length > 0 ? (
+                  records.map((record, index) => (
+                    <Card key={index}>
+                      <h5>👤 {record.patientName}</h5>
+                      <p>
+                        <strong>🆔 Age:</strong> {record.age} |{" "}
+                        <strong>⚧ Gender:</strong> {record.gender}
+                      </p>
+                      <p>
+                        <strong>🔬 Diagnosis:</strong> {record.diagnosis}
+                      </p>
+                      <p>
+                        <strong>🤒 Symptoms:</strong> {record.symptoms}
+                      </p>
+                    </Card>
+                  ))
+                ) : (
+                  <p className="text-muted">No records found.</p>
+                )}
+              </>
             )}
+
+            {/* Logout Button */}
+            <div className="text-center mt-4">
+              <Button onClick={logout}>🔒 Logout</Button>
+            </div>
           </>
         )}
       </Container>

@@ -28,7 +28,10 @@ contract HealthcareDataset {
     }
 
     modifier onlyAuthorized() {
-        require(doctors[msg.sender] || patients[msg.sender], "Not authorized");
+        require(
+            doctors[msg.sender] || patients[msg.sender],
+            "Not authorized"
+        );
         _;
     }
 
@@ -46,13 +49,21 @@ contract HealthcareDataset {
         emit PatientAdded(_patient);
     }
 
-    function storePatientRecord(address _patient, string memory _encryptedHash) public onlyDoctor {
+    function storePatientRecord(address _patient, string memory _encryptedHash)
+        public
+        onlyDoctor
+    {
         require(patients[_patient], "Invalid patient address");
-        patientRecords[_patient].push(_encryptedHash); // ✅ Fix: Push new record to array
+        patientRecords[_patient].push(_encryptedHash);
         emit RecordAdded(_patient, _encryptedHash);
     }
 
-    function getPatientRecords(address _patient) public view onlyAuthorized returns (string[] memory) {
-        return patientRecords[_patient]; // ✅ Fix: Correct return type (string[] memory)
+    function getPatientRecords(address _patient)
+        public
+        view
+        onlyAuthorized
+        returns (string[] memory)
+    {
+        return patientRecords[_patient];
     }
 }
