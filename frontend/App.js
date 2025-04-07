@@ -54,17 +54,16 @@ function App() {
     diagnosis: ""
   });
 
-  const fetchRecords = useCallback(
-    async (currentUser) => {
-      try {
-        const response = await axios.get(`${backendURL}/fetchRecords`, {
-          headers: { Authorization: `Bearer ${currentUser.token}` }
-        });
-        setRecords(response.data);
-      } catch (error) {
-        console.error("❌ Error fetching records:", error);
-      }
-    }, [backendURL]); 
+  const fetchRecords = useCallback(async (currentUser) => {
+    try {
+      const response = await axios.get(`${backendURL}/fetchRecords`, {
+        headers: { Authorization: `Bearer ${currentUser.token}` }
+      });
+      setRecords(response.data);
+    } catch (error) {
+      console.error("❌ Error fetching records:", error);
+    }
+  }, [backendURL]);
 
   // Include fetchRecords in the effect's dependency array
   useEffect(() => {
@@ -75,7 +74,7 @@ function App() {
         fetchRecords(storedUser);
       }
     }
-  }, [fetchRecords]);
+  }, [fetchRecords]); 
   
 
   const handleLoginInputChange = (e) => {
