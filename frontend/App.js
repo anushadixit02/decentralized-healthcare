@@ -54,7 +54,7 @@ function App() {
     diagnosis: ""
   });
 
-  // Wrap fetchRecords in useCallback to avoid missing dependency warning
+  // Wrap fetchRecords in useCallback to ensure it's stable between renders
   const fetchRecords = useCallback(async (currentUser) => {
     try {
       const response = await axios.get(`${backendURL}/fetchRecords`, {
@@ -66,6 +66,7 @@ function App() {
     }
   }, []);
 
+  // Run on mount and whenever fetchRecords changes (it won't, thanks to useCallback)
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     if (storedUser) {
@@ -90,7 +91,6 @@ function App() {
       const response = await axios.post(`${backendURL}/login`, loginData);
       localStorage.setItem("user", JSON.stringify(response.data));
       setUser(response.data);
-      // If the logged-in user is a patient, immediately fetch records
       if (response.data.role === "patient") {
         fetchRecords(response.data);
       }
@@ -168,8 +168,6 @@ function App() {
             <h2 className="mt-4">
               📌 Welcome, {user.role === "doctor" ? "Doctor" : "Patient"}
             </h2>
-
-            {/* Doctor: Store New Patient Record */}
             {user.role === "doctor" && (
               <>
                 <h2 className="mt-4">📌 Store New Patient Record</h2>
@@ -225,8 +223,6 @@ function App() {
                 </div>
               </>
             )}
-
-            {/* Patient: View Medical Records */}
             {user.role === "patient" && (
               <>
                 <h2 className="mt-4">📂 Your Medical Records:</h2>
@@ -251,8 +247,6 @@ function App() {
                 )}
               </>
             )}
-
-            {/* Logout Button */}
             <div className="text-center mt-4">
               <Button onClick={logout}>🔒 Logout</Button>
             </div>
