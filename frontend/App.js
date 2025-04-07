@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import styled from "styled-components";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -54,6 +54,18 @@ function App() {
     diagnosis: ""
   });
 
+  // Wrap fetchRecords in useCallback to avoid missing dependency warning
+  const fetchRecords = useCallback(async (currentUser) => {
+    try {
+      const response = await axios.get(`${backendURL}/fetchRecords`, {
+        headers: { Authorization: `Bearer ${currentUser.token}` }
+      });
+      setRecords(response.data);
+    } catch (error) {
+      console.error("❌ Error fetching records:", error);
+    }
+  }, []);
+
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     if (storedUser) {
@@ -62,7 +74,7 @@ function App() {
         fetchRecords(storedUser);
       }
     }
-  }, []);
+  }, [fetchRecords]);
 
   const handleLoginInputChange = (e) => {
     setLoginData({ ...loginData, [e.target.name]: e.target.value });
@@ -78,7 +90,6 @@ function App() {
       const response = await axios.post(`${backendURL}/login`, loginData);
       localStorage.setItem("user", JSON.stringify(response.data));
       setUser(response.data);
-
       // If the logged-in user is a patient, immediately fetch records
       if (response.data.role === "patient") {
         fetchRecords(response.data);
@@ -93,18 +104,6 @@ function App() {
     localStorage.removeItem("user");
     setUser(null);
     setRecords([]);
-  };
-
-  // 📂 Fetch Records for Patient
-  const fetchRecords = async (currentUser = user) => {
-    try {
-      const response = await axios.get(`${backendURL}/fetchRecords`, {
-        headers: { Authorization: `Bearer ${currentUser.token}` }
-      });
-      setRecords(response.data);
-    } catch (error) {
-      console.error("❌ Error fetching records:", error);
-    }
   };
 
   // 🩺 Submit New Patient Record (Doctor Only)
