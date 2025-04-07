@@ -20,11 +20,7 @@ const secretKey = process.env.JWT_SECRET || "supersecretkey";
 const encryptionKey = process.env.SECRET_KEY || "my_super_secret_key";
 
 // 🌍 Blockchain & IPFS Setup
-const provider = new ethers.JsonRpcProvider("http://127.0.0.1:8545");
-// Disable ENS resolution on Hardhat
-provider.getResolver = async () => {
-  throw new Error("ENS is not supported on Hardhat network");
-};
+const provider = new ethers.JsonRpcProvider(process.env.ALCHEMY_SEPOLIA_URL);
 
 const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
 const signer = wallet.connect(provider);

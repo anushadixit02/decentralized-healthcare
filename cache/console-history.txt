@@ -1,3 +1,17 @@
+console.log("Is Patient Registered?", isPatient);  // Expected output: true
+const isPatient = await contract.patients("0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266");
+await contract.addPatient("0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266");
+console.log("Is Doctor Registered?", isDoctor);  // Expected output: true
+const isDoctor = await contract.doctors("0x70997970C51812dc3A010C7d01b50e0d17dc79C8");
+await contract.addDoctor("0x70997970C51812dc3A010C7d01b50e0d17dc79C8");
+const contract = await ethers.getContractAt("HealthcareDataset", "0x576C23249Ad137Df1B8D35E5b7E4319A87B9AAe1");
+console.log("Is Patient?", isPatient); // Should print: true
+const isPatient = await contract.patients("0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266");
+await contract.addPatient("0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266");
+await contract.addDoctor("0x70997970C51812dc3A010C7d01b50e0d17dc79C8");
+console.log("Is Doctor?", isDoctor);  // Should output: true
+const isDoctor = await contract.doctors("0x70997970C51812dc3A010C7d01b50e0d17dc79C8");
+const contract = await ethers.getContractAt("HealthcareDataset", "0x576C23249Ad137Df1B8D35E5b7E4319A87B9AAe1");
 console.log("Is Patient?", isPatient);
 console.log("Is Doctor?", isDoctor);
 const isPatient = await contract.patients("0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266");
