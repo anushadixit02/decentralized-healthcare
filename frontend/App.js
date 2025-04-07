@@ -55,7 +55,6 @@ function App() {
     diagnosis: ""
   });
 
-  // Add [backendURL] to the dependency array
   const fetchRecords = useCallback(
     async (currentUser) => {
       try {
@@ -66,9 +65,7 @@ function App() {
       } catch (error) {
         console.error("❌ Error fetching records:", error);
       }
-    },
-    [backendURL] // <-- Add backendURL here
-  );
+    }, [https://decentralized-healthcare.onrender.com]);
 
   // Include fetchRecords in the effect's dependency array
   useEffect(() => {
@@ -80,6 +77,7 @@ function App() {
       }
     }
   }, [fetchRecords]);
+  
 
   const handleLoginInputChange = (e) => {
     setLoginData({ ...loginData, [e.target.name]: e.target.value });
