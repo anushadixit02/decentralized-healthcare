@@ -246,8 +246,21 @@ app.get("/fetchRecords", verifyToken, verifyPatient, async (req, res) => {
     for (let hash of ipfsHashes) {
       const url = `https://gateway.pinata.cloud/ipfs/${hash}`;
       const ipfsRes = await axios.get(url);
-      // Assume the file on IPFS is stored as JSON with property "pinataContent"
-      const encryptedData = ipfsRes.data.pinataContent;
+      console.log("Raw IPFS response for hash", hash, ":", ipfsRes.data);
+      
+      let encryptedData;
+      if (typeof ipfsRes.data === "string") {
+        // If the response is a plain string, use it directly.
+        encryptedData = ipfsRes.data;
+      } else if (typeof ipfsRes.data === "object" && ipfsRes.data.pinataContent) {
+        // Otherwise, if it's an object with a property named pinataContent, use that.
+        encryptedData = ipfsRes.data.pinataContent;
+      } else {
+        console.error("Unexpected IPFS response format for hash", hash, ":", ipfsRes.data);
+        continue; // Skip this record if the format is unexpected.
+      }
+      
+      console.log("Encrypted data fetched:", encryptedData);
       const record = decryptData(encryptedData, encryptionKey);
       records.push(record);
     }
