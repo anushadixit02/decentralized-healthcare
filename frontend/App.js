@@ -4,8 +4,7 @@ import styled from "styled-components";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // If you need a dynamic URL, use process.env.REACT_APP_BACKEND_URL
-const backendURL = "http://localhost:3000";
-
+const backendURL = process.env.REACT_APP_BACKEND_URL || "http://localhost:3000";
 // Styled Components for UI Enhancements
 const Container = styled.div`
   max-width: 800px;
@@ -65,7 +64,7 @@ function App() {
       } catch (error) {
         console.error("❌ Error fetching records:", error);
       }
-    }, [https://decentralized-healthcare.onrender.com]);
+    }, [backendURL]); 
 
   // Include fetchRecords in the effect's dependency array
   useEffect(() => {
