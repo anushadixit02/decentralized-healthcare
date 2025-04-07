@@ -64,7 +64,8 @@ function App() {
       console.error("❌ Error fetching records:", error);
     }
   }, [backendURL]);
-  
+
+  // 2. useEffect with all correct dependencies
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     if (storedUser) {
@@ -73,7 +74,7 @@ function App() {
         fetchRecords(storedUser);
       }
     }
-  }, [fetchRecords]); 
+  }, [fetchRecords]); // This is correct
   
 
   const handleLoginInputChange = (e) => {
