@@ -3,6 +3,7 @@ import axios from "axios";
 import styled from "styled-components";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+// If you need a dynamic URL, use process.env.REACT_APP_BACKEND_URL
 const backendURL = "http://localhost:3000";
 
 // Styled Components for UI Enhancements
@@ -54,19 +55,22 @@ function App() {
     diagnosis: ""
   });
 
-  // Wrap fetchRecords in useCallback to ensure it's stable between renders
-  const fetchRecords = useCallback(async (currentUser) => {
-    try {
-      const response = await axios.get(`${backendURL}/fetchRecords`, {
-        headers: { Authorization: `Bearer ${currentUser.token}` }
-      });
-      setRecords(response.data);
-    } catch (error) {
-      console.error("❌ Error fetching records:", error);
-    }
-  }, []);
+  // Add [backendURL] to the dependency array
+  const fetchRecords = useCallback(
+    async (currentUser) => {
+      try {
+        const response = await axios.get(`${backendURL}/fetchRecords`, {
+          headers: { Authorization: `Bearer ${currentUser.token}` }
+        });
+        setRecords(response.data);
+      } catch (error) {
+        console.error("❌ Error fetching records:", error);
+      }
+    },
+    [backendURL] // <-- Add backendURL here
+  );
 
-  // Run on mount and whenever fetchRecords changes (it won't, thanks to useCallback)
+  // Include fetchRecords in the effect's dependency array
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     if (storedUser) {
@@ -91,6 +95,7 @@ function App() {
       const response = await axios.post(`${backendURL}/login`, loginData);
       localStorage.setItem("user", JSON.stringify(response.data));
       setUser(response.data);
+      // If the logged-in user is a patient, immediately fetch records
       if (response.data.role === "patient") {
         fetchRecords(response.data);
       }
@@ -124,11 +129,9 @@ function App() {
       return;
     }
     try {
-      const response = await axios.post(
-        `${backendURL}/addRecord`,
-        recordData,
-        { headers: { Authorization: `Bearer ${user.token}` } }
-      );
+      const response = await axios.post(`${backendURL}/addRecord`, recordData, {
+        headers: { Authorization: `Bearer ${user.token}` }
+      });
       alert("✅ Patient record stored! IPFS Hash: " + response.data.ipfsHash);
     } catch (error) {
       console.error("❌ Error storing patient record:", error);
@@ -168,6 +171,8 @@ function App() {
             <h2 className="mt-4">
               📌 Welcome, {user.role === "doctor" ? "Doctor" : "Patient"}
             </h2>
+
+            {/* Doctor: Store New Patient Record */}
             {user.role === "doctor" && (
               <>
                 <h2 className="mt-4">📌 Store New Patient Record</h2>
@@ -223,6 +228,8 @@ function App() {
                 </div>
               </>
             )}
+
+            {/* Patient: View Medical Records */}
             {user.role === "patient" && (
               <>
                 <h2 className="mt-4">📂 Your Medical Records:</h2>
@@ -247,6 +254,8 @@ function App() {
                 )}
               </>
             )}
+
+            {/* Logout Button */}
             <div className="text-center mt-4">
               <Button onClick={logout}>🔒 Logout</Button>
             </div>
