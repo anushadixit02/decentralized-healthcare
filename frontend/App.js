@@ -64,8 +64,7 @@ function App() {
       console.error("❌ Error fetching records:", error);
     }
   }, [backendURL]);
-
-  // Include fetchRecords in the effect's dependency array
+  
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     if (storedUser) {
